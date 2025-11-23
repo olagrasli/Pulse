@@ -491,12 +491,7 @@ pveum user permissions pulse-monitor@pam
 
 **Fix permissions:**
 
-Re-run the Pulse setup script on the Proxmox node:
-```bash
-curl -sSL https://raw.githubusercontent.com/rcourtman/Pulse/main/scripts/setup-pve.sh | bash
-```
-
-Or manually:
+Set up the required permissions manually on the Proxmox node:
 ```bash
 # Shared read-only access
 pveum aclmod / -user pulse-monitor@pam -role PVEAuditor
